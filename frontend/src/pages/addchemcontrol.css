@@ -1,0 +1,45 @@
+#accf
+{
+    
+    display: inline-block;
+    width: 400px;
+    height: auto;
+    padding: 30px;
+    background-color: #ee7600;
+    color: white;
+    border-radius: 50px;
+}
+
+#accd
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+   
+    text-align: center;
+    
+}
+
+label 
+{ 
+    float: left;
+    font-weight: bolder;
+}
+
+input
+{
+margin-bottom: 20px;
+}
+
+#acch
+{
+    color: black;
+    font-weight: bolder;
+}
+
+#accl
+{
+   margin-top: 15px;
+    margin-left: 5px;
+    background-color: darkred;
+    border-style: none;
+}

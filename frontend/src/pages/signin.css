@@ -1,0 +1,35 @@
+#signd2
+{
+
+    height: 100%;
+    width: 100%;
+
+}
+
+#signd
+{
+    margin-top: 100px;
+    text-align: center;
+    width: 450px;
+}
+
+#signl
+{
+    width: 420px;
+    height: 50px;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#I1,#I2,#I3,#I4
+{
+   height: 50px;
+   border-radius: 6px;
+    font-size: 16px;
+}
+
+#signp
+{
+   font-size: 18px; 
+}

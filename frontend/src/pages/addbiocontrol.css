@@ -1,0 +1,45 @@
+#abcf
+{
+    
+    display: inline-block;
+    width: 400px;
+    height: auto;
+    padding: 30px;
+    background-color: #0892d0;
+    color: white;
+    border-radius: 50px;
+}
+
+#abcd
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+   
+    text-align: center;
+    
+}
+
+label 
+{ 
+    float: left;
+    font-weight: bolder;
+}
+
+input
+{
+margin-bottom: 20px;
+}
+
+#abch
+{
+    color: black;
+    font-weight: bolder;
+}
+
+#abcl
+{
+   margin-top: 15px;
+    margin-left: 5px;
+    background-color: darkred;
+    border-style: none;
+}

@@ -1,0 +1,41 @@
+#upff
+{
+    
+    display: inline-block;
+    width: 500px;
+    padding: 30px;
+    background-color: yellowgreen;
+}
+
+#upfd
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+   
+    text-align: center;
+    
+}
+
+label 
+{ 
+    float: left;
+    font-weight: bolder;
+}
+
+input
+{
+margin-bottom: 20px;
+}
+
+#upfh
+{
+    color: black;
+    font-weight: bolder;
+}
+#upl
+{
+   margin-top: 15px;
+    margin-left: 5px;
+    background-color: darkred;
+    border-style: none;
+}

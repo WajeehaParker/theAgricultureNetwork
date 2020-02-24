@@ -1,0 +1,24 @@
+#mcon
+{
+    text-align: center;
+}
+
+#mh
+{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+#ml1,#ml2
+{
+   width: 200px; 
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#mb, #ml3,#ml4,#ml5,#ml6
+{
+    width: 200px; 
+    text-align: center;
+    font-weight: bold;
+}

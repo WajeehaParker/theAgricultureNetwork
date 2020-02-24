@@ -1,0 +1,63 @@
+#bcj {
+  background-image: url(../images/photo-of-a-blue-butterfly-2892250.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: white;
+}
+
+#bch
+{
+    font-size: 50px;
+    color: lightyellow;
+    font-weight: 1000;
+}
+
+#bcb
+{
+    margin-right: 30px;
+    background-color: #0892d0;
+    border-style: none;
+    color: white;
+}
+
+table,.bcth,td
+{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.bcth,td
+{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 3px;
+    background-color: white;
+   
+}
+.bcth
+{
+    background-color: #0892d0;
+    color: white;
+}
+
+.link
+{
+    padding: 5px;
+}
+
+#bcl
+{
+    margin-top: 40px;
+    margin-right: 275px;
+    background-color: darkred;
+    border-style: none;
+    width: 120px;
+    color: white;
+   
+}
+#bcld
+{
+    text-align: right;
+}

@@ -1,0 +1,63 @@
+#ccj {
+  background-image: url(../images/Difference-Between-Biological-Control-and-Chemical-Control-fig-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: white;
+}
+
+#cch
+{
+    font-size: 50px;
+    color: lightyellow;
+    font-weight: 1000;
+}
+
+#ccb
+{
+    margin-right: 30px;
+    background-color: #ee7600;
+    border-style: none;
+    color: white;
+}
+
+table,.ccth,td
+{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.ccth,td
+{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 3px;
+    background-color: white;
+   
+}
+.ccth
+{
+    background-color: #ee7600;
+    color: white;
+}
+
+.link
+{
+    padding: 5px;
+}
+
+#ccl
+{
+    margin-top: 40px;
+    margin-right: 275px;
+    background-color: darkred;
+    border-style: none;
+    width: 120px;
+    color: white;
+   
+}
+#ccld
+{
+    text-align: right;
+}

@@ -1,0 +1,31 @@
+.wrapper{
+            width: 500px;
+            margin: 0 auto;
+        }
+
+#dpl
+{
+    margin-bottom: 20px;
+    width: 60px;
+}
+
+#dpi
+{
+    margin-top:-20px;
+    margin-right: 10px;
+     width: 60px;
+}
+
+#dph
+{
+    margin-top: 50px;
+}
+
+#dpf
+{
+    background-color: rgba(208, 103, 103, 0.24);
+    border-radius: 15px;
+    padding-left: 25px;
+    padding-top: 10px;
+    box-shadow: 10px 10px 15px lightgray;
+}

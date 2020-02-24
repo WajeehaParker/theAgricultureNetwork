@@ -1,0 +1,63 @@
+#lcj {
+  background-image: url(../images/person-holding-fruit-on-plant-704756.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: white;
+}
+
+#lch
+{
+    font-size: 50px;
+    color: lightyellow;
+    font-weight: 1000;
+}
+
+#lcb
+{
+    margin-right: 30px;
+    background-color: #c80815;
+    border-style: none;
+    color: white;
+}
+
+table,.lcth,td
+{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.lcth,td
+{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 3px;
+    background-color: white;
+   
+}
+.lcth
+{
+    background-color: #c80815;
+    color: white;
+}
+
+.link
+{
+    padding: 5px;
+}
+
+#lcl
+{
+    margin-top: 40px;
+    margin-right: 275px;
+    background-color: darkred;
+    border-style: none;
+    width: 120px;
+    color: white;
+   
+}
+#lcld
+{
+    text-align: right;
+}

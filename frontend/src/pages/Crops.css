@@ -1,0 +1,56 @@
+#cj {
+  background-image: url(../images/pexels-photo-1508669.jpeg);
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: 100% auto;
+  color: white;
+}
+
+
+#ch1
+{
+    font-size: 50px;
+    color: lightyellow;
+    font-weight: 1000;
+}
+
+#cl
+{
+    margin-right: 30px;
+    background-color: #640000;
+    border-style: none;
+    width: 120px;
+    color: white;
+}
+
+table,th,td
+{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+th,td
+{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 3px;
+    background-color: white;
+   
+}
+th
+{
+    background-color: #dc911e;
+   
+}
+
+.link
+{
+    padding: 5px;
+}
+
+
+#pld
+{
+    text-align: right;
+}
