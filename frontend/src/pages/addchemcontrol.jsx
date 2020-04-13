@@ -8,7 +8,7 @@ class AddChemicalControl extends Component
   constructor(props){
     super();
     this.state={
-      pests:[], insect:'', desc:'', err:''
+      pests:[], insect:'Select', desc:'', err:''
     }
   }
 
@@ -34,6 +34,7 @@ class AddChemicalControl extends Component
         description: states.desc
       }
       this.addControl(chemControl);
+      this.props.history.push("/chemcontrol");
     }
   };
 
@@ -64,7 +65,7 @@ class AddChemicalControl extends Component
         return (
                 <div class="container" id="accd">
                   <h1 id="acch">ADD CHEMICAL CONTROL</h1><br />
-                  <form id="accf">
+                  <div id="accf">
                     <div class="row">
                     {
                       /* <div class="col-sm-3">
@@ -91,9 +92,9 @@ class AddChemicalControl extends Component
                       </div>
                     </div>
                     <div>{this.state.err}</div>
-                    <Link to="/chemcontrol"><button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>Submit</button></Link>
+                    <button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>Submit</button>
                     <Link id="accl" to="/chemcontrol" class="btn btn-primary" role="button">Cancel</Link>
-                  </form>
+                  </div>
                 </div>
         );
     }

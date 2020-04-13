@@ -8,7 +8,7 @@ class AddBioControl extends Component
   constructor(props){
     super();
     this.state={
-      pests:[], predator:'', prey:'', err:''
+      pests:[], predator:'Select', prey:'Select', err:''
     }
   }
 
@@ -37,6 +37,7 @@ class AddBioControl extends Component
         prey: p2
       }
       this.addControl(bioControl);
+      this.props.history.push("/biocontrol");
     }
   };
 
@@ -101,7 +102,7 @@ class AddBioControl extends Component
             </div>
           </div>
           <div>{this.state.err}</div>
-          <Link to="/biocontrol"><button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>Submit</button></Link>
+          <button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>Submit</button>
           <Link id="abcl" to="/biocontrol" class="btn btn-primary" role="button">Cancel</Link>
         </div>
       </div>

@@ -36,6 +36,7 @@ class Addpest extends Component
         type: states.type
       }
       this.addPest(pest);
+      this.props.history.push("/pest");
     }
   };
 
@@ -145,7 +146,7 @@ class Addpest extends Component
            </div>*/
          }
           <div>{this.state.err}</div>
-          <Link to="/pest"><button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>Submit</button></Link>
+          <button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>Submit</button>
           <Link id="apl" to="/pest" class="btn btn-primary" role="button">Cancel</Link>
         </div>
       </div>

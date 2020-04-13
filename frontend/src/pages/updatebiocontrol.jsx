@@ -8,7 +8,7 @@ class UpdateBioControl extends Component
   constructor(props){
     super();
     this.state={
-      id:props.match.params.id, control:{}, pests:[], err:'', predator:'', prey:''
+      id:props.match.params.id, control:{}, pests:[], err:'', predator:'', prey:'', fetchData:true
     }
   }
 
@@ -45,6 +45,18 @@ class UpdateBioControl extends Component
       .catch(err => console.error(err));
   };
 
+  getPestName = _ =>{
+    this.state.fetchData=false;
+    this.state.pests.map((index, j)=>{
+      if(this.state.control.predator===index['id']){
+        this.state.predator=index['name'];
+      }
+      if(this.state.control.prey===index['id']){
+        this.state.prey=index['name'];
+      }
+    });
+  }
+
   update = states => {
     var p1=0, p2=0;
     if(states.predator==='Select' || states.prey==='Select'){
@@ -64,6 +76,7 @@ class UpdateBioControl extends Component
         prey: p2
       }
       this.edit(temp);
+      this.props.history.push("/biocontrol");
     }
   };
 
@@ -83,8 +96,9 @@ class UpdateBioControl extends Component
     render(){
         return (
           <div class="container" id="ubcfd">
+          {this.state.pests.length>0 && this.state.fetchData && this.getPestName()}
             <h1 id="ubcfh">UPDATE BIOLOGICAL CONTROL</h1><br />
-            <form id="ubcf">
+            <div id="ubcf">
               <div class="row">
                 <div class="col-12">
                   <label>Predator</label>
@@ -112,10 +126,10 @@ class UpdateBioControl extends Component
                   </select>
                 </div>
               </div>
-              {this.state.err}
-              <Link id="ubcl" to="/biocontrol" class="btn btn-primary mt-3" onClick={()=> this.update(this.state)}>Submit</Link>
+              <div>{this.state.err}</div>
+              <button class="btn btn-primary mt-3" onClick={()=>this.update(this.state)}>Submit</button>
               <Link id="ubcl" to="/biocontrol" class="btn btn-primary" role="button">Cancel</Link>
-            </form>
+            </div>
           </div>
         );
     }

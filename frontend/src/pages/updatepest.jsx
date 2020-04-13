@@ -45,6 +45,7 @@ class Updatepest extends Component
         "type" : states.type
       }
       this.edit(temp);
+      this.props.history.push("/pest");
     }
   };
 
@@ -65,7 +66,7 @@ class Updatepest extends Component
         return (
           <div class="container" id="upfd">
             <h1 id="upfh">UPDATE PESTICIDE</h1>
-            <form id="upff">
+            <div id="upff">
               <div class="row">
                 <div class="col-12">
                   <label>Pest Name</label>
@@ -95,10 +96,10 @@ class Updatepest extends Component
                   </select>
                 </div>
               </div>
-              {this.state.err}
-                <Link id="upl" to="/pest" class="btn btn-primary mt-3" onClick={()=> this.update(this.state)}>Submit</Link>
+               <div>{this.state.err}</div>
+               <button class="btn btn-primary mt-3" onClick={()=>this.update(this.state)}>Submit</button>
                 <Link id="upl" to="/pest" class="btn btn-primary" role="button">Cancel</Link>
-            </form>
+            </div>
           </div>
         );
     }

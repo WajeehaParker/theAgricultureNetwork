@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { createHashHistory } from "history";
+import { Redirect } from 'react-router-dom'
 import '../pages/signin.css';
+import Login from '../pages/login';
 
 
 class Signin extends Component
@@ -25,13 +28,11 @@ class Signin extends Component
     else{
       this.state.users.map((item, i)=>{
         if(item['email']===this.state.email){
-          this.setState({
-            err:"Username alreaady Exists!",
-            duplicateUsername: true
-          })
+          this.state.duplicateUsername= true;
+          this.state.err="Username already Exists!";
         }
       });
-      if(this.state.err==="Username alreaady Exists!"){
+      if(this.state.duplicateUsername===false){
         var user = {
           first_name:states.fname,
           last_name: states.lname,
@@ -39,6 +40,7 @@ class Signin extends Component
           password: states.password
         }
         this.addUser(user);
+        this.props.history.push("/");
       }
     }
   };
@@ -56,15 +58,15 @@ class Signin extends Component
   };
 
   getUsers = _ =>{
-        fetch('http://localhost:4000/users')
-        .then(res => {
-          return res.json()
-       })
-      .then(users=> {
-          this.setState({ users: users })
-       })
-        .catch(err => console.error(err));
-    };
+    fetch('http://localhost:4000/users/')
+    .then(res => {
+      return res.json()
+    })
+    .then(user=> {
+        this.setState({ users: user })
+     })
+     .catch(err => console.error(err));
+   };
 
     render(){
         return (
@@ -87,9 +89,9 @@ class Signin extends Component
                       </div>
                     </div>
 
-                     <div>{this.state.err}</div>
-                     <Link to="/"><button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>CREATE ACCOUNT</button></Link>
-                      <br /><br />
+                    <div>{this.state.err}</div>
+                    <button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>CREATE ACCOUNT</button>
+                    <br /><br />
 
                     <p id="signp">Already have an account?<span><Link id="signin" to="/"> Login in</Link></span></p>
                   </div>

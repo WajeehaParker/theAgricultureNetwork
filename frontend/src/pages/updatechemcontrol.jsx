@@ -8,7 +8,7 @@ class UpdateChemControl extends Component
   constructor(props){
     super();
     this.state={
-      id:props.match.params.id, control:{}, pests:[], err:'', insect:'', desc:''
+      id:props.match.params.id, control:{}, pests:[], err:'', insect:'', desc:'', fetchData:true
     }
   }
 
@@ -46,6 +46,15 @@ class UpdateChemControl extends Component
       .catch(err => console.error(err));
   };
 
+  getPestName = _ =>{
+    this.state.fetchData=false;
+    this.state.pests.map((index, j)=>{
+      if(this.state.control.insect===index['id']){
+        this.state.insect=index['name'];
+      }
+    });
+  }
+
   update = states => {
     var p1=0;
     if(states.insect==='Select' || states.desc===''){
@@ -62,6 +71,7 @@ class UpdateChemControl extends Component
         description: states.desc
       }
       this.edit(temp);
+      this.props.history.push("/chemcontrol");
     }
   };
 
@@ -81,8 +91,9 @@ class UpdateChemControl extends Component
     render(){
         return (
           <div class="container" id="uccfd">
+          {this.state.pests.length>0 && this.state.fetchData && this.getPestName()}
             <h1 id="ubcfh">UPDATE CHEMICAL CONTROL</h1><br />
-            <form id="uccf">
+            <div id="uccf">
               <div class="row">
                 <div class="col-12">
                   <label>Insect</label>
@@ -103,10 +114,10 @@ class UpdateChemControl extends Component
                   <input name="desc" value={this.state.desc} type="text" class="form-control" onChange={e => this.change(e)} />
                 </div>
               </div>
-              {this.state.err}
-              <Link id="uccl" to="/chemcontrol" class="btn btn-primary mt-3" onClick={()=> this.update(this.state)}>Submit</Link>
+              <div>{this.state.err}</div>
+              <button id="uccl" class="btn btn-primary mt-3" onClick={()=>this.update(this.state)}>Submit</button>
               <Link id="uccl" to="/chemcontrol" class="btn btn-primary" role="button">Cancel</Link>
-            </form>
+            </div>
           </div>
         );
     }

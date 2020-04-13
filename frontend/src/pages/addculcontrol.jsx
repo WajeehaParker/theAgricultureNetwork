@@ -8,7 +8,7 @@ class AddCulControl extends Component
   constructor(props){
     super();
     this.state={
-      pests:[], insect:'', desc:'', err:''
+      pests:[], insect:'Select', desc:'', err:''
     }
   }
 
@@ -34,6 +34,7 @@ class AddCulControl extends Component
         description: states.desc
       }
       this.addControl(culControl);
+      this.props.history.push("/culcontrol");
     }
   };
 
@@ -64,7 +65,7 @@ class AddCulControl extends Component
         return (
                 <div class="container" id="alcd">
                   <h1 id="alch">ADD CULTURAL CONTROL</h1><br />
-                  <form id="alcf">
+                  <div id="alcf">
                     <div class="row">
                     {
                       /* <div class="col-sm-3">
@@ -91,9 +92,9 @@ class AddCulControl extends Component
                       </div>
                     </div>
                     <div>{this.state.err}</div>
-                    <Link to="/culControl"><button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>Submit</button></Link>
+                    <button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>Submit</button>
                     <Link id="alcl" to="/culcontrol" class="btn btn-primary" role="button">Cancel</Link>
-                  </form>
+                  </div>
                 </div>
         );
     }

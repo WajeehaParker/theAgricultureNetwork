@@ -8,7 +8,7 @@ class AddMechanicalControl extends Component
   constructor(props){
     super();
     this.state={
-      pests:[], insect:'', desc:'', err:''
+      pests:[], insect:'Select', desc:'', err:''
     }
   }
 
@@ -34,6 +34,7 @@ class AddMechanicalControl extends Component
         description: states.desc
       }
       this.addControl(mechControl);
+      this.props.history.push("/mechcontrol");
     }
   };
 
@@ -64,7 +65,7 @@ class AddMechanicalControl extends Component
         return (
                 <div class="container" id="amcd">
                   <h1 id="acch">ADD MECHANICAL CONTROL</h1><br />
-                  <form id="amcf">
+                  <div id="amcf">
                     <div class="row">
                     {
                       /* <div class="col-sm-3">
@@ -90,9 +91,10 @@ class AddMechanicalControl extends Component
                         <input type="text" class="form-control" name="desc" value={this.state.desc} onChange={e => this.change(e)} />
                       </div>
                     </div>
-                    <Link to="/mechcontrol"><button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>Submit</button></Link>
+                    <div>{this.state.err}</div>
+                    <button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>Submit</button>
                     <Link id="amcl" to="/mechcontrol" class="btn btn-primary" role="button">Cancel</Link>
-                  </form>
+                  </div>
                 </div>
         );
     }

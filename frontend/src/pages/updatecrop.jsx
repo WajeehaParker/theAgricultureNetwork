@@ -76,6 +76,7 @@ class Updatepest extends Component
         fer_dozes:states.fertilizer_dozes
       }
       this.edit(crop);
+      this.props.history.push("/crops");
     }
   };
 
@@ -96,7 +97,7 @@ class Updatepest extends Component
         return (
                 <div class="container" id="ucd">
                   <h1 id="uch">UPDATE CROP</h1>
-                  <form id="acf">
+                  <div id="acf">
                   <div class="row">
                     <div class="col-6"  >
                       <label >Name:</label>
@@ -317,9 +318,9 @@ class Updatepest extends Component
                     </div>
                   </div>
                   <div>{this.state.err}</div>
-                  <Link to="/crops"><button class="btn btn-primary mt-3" onClick={()=>this.update(this.state)}>Submit</button></Link>
+                  <button class="btn btn-primary mt-3" onClick={()=>this.update(this.state)}>Submit</button>
                   <Link id="ucl" to="/crops" class="btn btn-primary" role="button">Cancel</Link>
-                </form>
+                </div>
                 </div>
         );
     }

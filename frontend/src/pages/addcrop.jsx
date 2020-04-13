@@ -12,7 +12,7 @@ class Addcrop extends Component
       name:'', kingdom:'', phylum:'', class:'', order:'', family:'', genus:'', cotyledon:'monocot', type:'herb',
       season:'Rabi', height:'', leaf_size:'', total_time:'', water_consumption:'', species:'', sexuality:'unisexual',
       climate_zone:'', water_resources:'', edible:'Yes', temperature:'', humidity:'', rainfall:'', sunshine:'', soil:'',
-      sowing_prd:'', fruiting_prd:'', province:'Sindh', district:'', fertilizers:'', fertilizer_dozes:'', err:''
+      sowing_prd:'', fruiting_prd:'', province:'Sindh', district:'Select', fertilizers:'', fertilizer_dozes:'', err:''
     }
   }
 
@@ -44,6 +44,7 @@ class Addcrop extends Component
         fer_dozes:states.fertilizer_dozes
       }
       this.addCrop(crop);
+      this.props.history.push("/crops");
     }
   };
 
@@ -74,7 +75,7 @@ class Addcrop extends Component
     return (
       <div class="container" id="acd">
         <h1 id="ach">ADD CROPS</h1>
-          <form id="acf">
+          <div id="acf">
           <div class="row">
             <div class="col-6"  >
               <label >Name:</label>
@@ -295,9 +296,9 @@ class Addcrop extends Component
             </div>
           </div>
           <div>{this.state.err}</div>
-          <Link to="/crops"><button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>Submit</button></Link>
+          <button class="btn btn-primary mt-3" onClick={()=>this.add(this.state)}>Submit</button>
           <Link id="acl" to="/crops" class="btn btn-primary" role="button">Cancel</Link>
-        </form>
+        </div>
       </div>
     );
   }
